@@ -1,0 +1,36 @@
+body {
+    background: grey;
+    margin: 0;
+    padding: 0;
+}
+ 
+nav ul {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 60px;
+}
+nav ul li {
+    font-size: 24px;
+    line-height: 40px;  
+    height: 40px;
+    display: inline;
+    padding: 40px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}    
+nav ul li a:hover {
+    color: darkred;
+}
+header h1{
+    text-align: center;
+}
+article header p{
+    font-style: italic;
+}
+main{ 
+    padding-left: 20px;
+}
