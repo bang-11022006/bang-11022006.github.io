@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>welcome</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mỗi Em</title>
+  <style>
+    body {
+      background-color: #fce4ec;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #d81b60;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .clickable {
+      color: #d81b60;
+      font-weight: bold;
+      cursor: pointer;
+      border: 2px solid #d81b60;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .clickable:hover {
+      background-color: #f8bbd0;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #880e4f;
+    }
+  </style>
 </head>
 <body>
-    <p style="color: brown;""">
-        This is heading 
-    </h1>
-    <h2 style="color: blueviolet; text-decoration: underline;">
-This is heading 2 with underline
-</h2>
-<p style="color: aqua;">
-This is a paragraph
-</p> 
+  <h1>Nhấn vào <span class="clickable" onclick="showLove()">mỗi em</span></h1>
+  <div id="result" class="result"></div>
+
+  <script>
+    function showLove() {
+      document.getElementById("result").textContent = "yêu anh";
+    }
+  </script>
 </body>
 </html>

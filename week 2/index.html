@@ -1,20 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <link rel="stylesheet" href="Todolist.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yêu anh</title>
+  <style>
+    body {
+      background-color: #ffeeee;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, p, #message {
+      color: #ff5c8d;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      margin-top: 10px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      background-color: #ff5c8d;
+      margin: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+    }
+
+    #message {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-<div class="my-list">
-<h1>Today's to do list</h1>
-<p>Monday, Septemper 19th
-</p>
-<ol type="1">   
-     <li>Write a blog post </li>
-     <li>study for exams </li>
-     <li>study for exams </li>
-     <li>Renew web hosting account and domain name </li>
-     <li>Learn something new </li>
-     <li>Update project log</li>
-</div>
+  <h1 id="title">Ngoài em ra anh còn nhắn tin với con nào không ?</h1>
+  <p id="subtext">Khai thật đi anh, em không giận đâu, em chỉ muốn biết thôi =))</p>
+  <img id="catImg" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm9vZW84dm4xcXZ4ZnhhY3dndTZybzAwbms5Z2RtNnR4Nms1cmh6eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nm66V8NDLPvyibvJVV/giphy.gif" alt="angry cat"/>
+
+  <div class="buttons">
+    <button id="noBtn" class="btn">nhiu em</button>
+    <button id="yesBtn" class="btn">mỗi em</button>
+  </div>
+
+  <div id="message"></div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const catImg = document.getElementById("catImg");
+    const title = document.getElementById("title");
+    const subtext = document.getElementById("subtext");
+    const message = document.getElementById("message");
+
+    yesBtn.addEventListener("click", () => {
+      // Khi chọn “mỗi em”
+      catImg.src = "z6798775186505_5802576ae2557c4da25268c500d67a16.jpg";
+      title.textContent = "Yêu anh 💖";
+      subtext.textContent = "";
+      message.textContent = "";
+      noBtn.style.display = "none"; // Ẩn "nhiu em"
+    });
+
+    noBtn.addEventListener("click", () => {
+      // Khi chọn “nhiu em”
+      catImg.src = "z6798772777068_944e8c871ca66d73cd61ca3d5c6e2f72.jpg";
+      title.textContent = "Mày tới công chiện với bà mày rồi =))";
+      subtext.textContent = "";
+      message.textContent = "";
+      yesBtn.style.display = "none"; // Ẩn "mỗi em"
+    });
+  </script>
 </body>
 </html>
